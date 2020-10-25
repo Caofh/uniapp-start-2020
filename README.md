@@ -2,6 +2,8 @@
 
 ## 基础架构
 
+### 多项目共存（一仓库多项目）方案
+
 ### 安装npm依赖
 ```
 npm install
@@ -9,26 +11,26 @@ npm install
 
 ### 本地构建，带watch监听
 ```
-npm run serve (买家端)
-num run serve_seller (卖家端)
+npm run serve (项目一)
+num run serve_seller (项目二)
 ```
 
 ### 测试环境构建
 ```
-npm run test (买家端)
-num run test_seller (卖家端)
+npm run test (项目一)
+num run test_seller (项目二)
 ```
 
 ### 预发布环境构建
 ```
-npm run pre (买家端)
-num run pre_seller (卖家端)
+npm run pre (项目一)
+num run pre_seller (项目二)
 ```
 
 ### 线上环境构建
 ```
-npm run build (买家端)
-num run build_seller (卖家端)
+npm run build (项目一)
+num run build_seller (项目二)
 ```
 
 ## 项目规则

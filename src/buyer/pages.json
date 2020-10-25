@@ -1,0 +1,30 @@
+{
+	"pages": [
+		{
+			"path": "pages/home/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		}
+
+	],
+	"subPackages": [{
+		"root": "pages/demo",
+		"pages": [
+			{
+				"path": "index/index",
+				"style": {
+					"navigationBarTitleText": "demo"
+				}
+			}
+		]
+
+		
+	}],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

@@ -1,0 +1,1 @@
+<view><page-head vue-id="e87cb308-1" title="{{title}}" bind:__l="__l"></page-head><view class="ad-view"><view class="ad-tips"><text>fff</text></view></view><view class="tips"><text class="tips-text">本示例页面仅演示ad组件。</text></view></view>

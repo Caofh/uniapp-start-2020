@@ -17,6 +17,16 @@
 
 		},
 		onLoad() {
+			console.log(123)
+			uni.getNetworkType({
+				success (res) {
+						// console.log(`${res.networkType}`);
+						console.log(res);
+				},
+				fail (res) {
+						console.log(`getNetworkType 调用失败`);
+				}
+		});
 
 		},
 		methods: {

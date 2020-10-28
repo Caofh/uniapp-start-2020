@@ -8,13 +8,42 @@
     "test": "cross-env UNI_INPUT_DIR='src/buyer' UNI_OUTPUT_DIR='dist/buyer' VUE_APP_ENV=test npm run build:mp-weixin --minimize",
     "pre": "cross-env UNI_INPUT_DIR='src/buyer' UNI_OUTPUT_DIR='dist/buyer' VUE_APP_ENV=pre npm run build:mp-weixin --minimize",
     "build": "npm run clear && cross-env UNI_INPUT_DIR='src/buyer' UNI_OUTPUT_DIR='dist/buyer' VUE_APP_ENV=production npm run build:mp-weixin --minimize",
+    
     "serve_seller": "cross-env UNI_INPUT_DIR='src/seller' UNI_OUTPUT_DIR='dist/seller' VUE_APP_ENV=development npm run dev:mp-weixin --minimize",
     "test_seller": "cross-env UNI_INPUT_DIR='src/seller' UNI_OUTPUT_DIR='dist/seller' VUE_APP_ENV=test npm run build:mp-weixin --minimize",
     "pre_seller": "cross-env UNI_INPUT_DIR='src/seller' UNI_OUTPUT_DIR='dist/seller' VUE_APP_ENV=pre npm run build:mp-weixin --minimize",
     "build_seller": "npm run clear && cross-env UNI_INPUT_DIR='src/seller' UNI_OUTPUT_DIR='dist/seller' VUE_APP_ENV=production npm run build:mp-weixin --minimize",
-    "build:mp-weixin": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin vue-cli-service uni-build",
+   
     "dev:mp-weixin": "cross-env NODE_ENV=development UNI_PLATFORM=mp-weixin vue-cli-service uni-build --watch",
-    "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i"
+    "build:mp-weixin": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin vue-cli-service uni-build",
+
+
+    "serve_tt": "cross-env UNI_INPUT_DIR='src/buyer' UNI_OUTPUT_DIR='dist/buyer' VUE_APP_ENV=development npm run dev:mp-toutiao",
+    "test_tt": "npm run clear_dev && cross-env VUE_APP_ENV=test npm run build:mp-toutiao && cp -rf ./dist/build ./dist/dev",
+    "pre_tt": "npm run clear_dev && cross-env VUE_APP_ENV=pre npm run build:mp-toutiao && cp -rf ./dist/build ./dist/dev",
+    "build_tt": "npm run clear_dev  && cross-env VUE_APP_ENV=production npm run build:mp-toutiao && cp -rf ./dist/build ./dist/dev",
+    "dev:mp-toutiao": "cross-env NODE_ENV=development UNI_PLATFORM=mp-toutiao vue-cli-service uni-build --watch",
+    "build:mp-toutiao": "cross-env NODE_ENV=production UNI_PLATFORM=mp-toutiao vue-cli-service uni-build",
+
+    "serve_baidu": "cross-env VUE_APP_ENV=development npm run dev:mp-baidu",
+    "test_baidu": "npm run clear_dev && cross-env VUE_APP_ENV=test npm run build:mp-baidu && cp -rf ./dist/build ./dist/dev",
+    "pre_baidu": "npm run clear_dev && cross-env VUE_APP_ENV=pre npm run build:mp-baidu && cp -rf ./dist/build ./dist/dev",
+    "build_baidu": "npm run clear_dev  && cross-env VUE_APP_ENV=production npm run build:mp-baidu && cp -rf ./dist/build ./dist/dev",
+    "build:mp-baidu": "cross-env NODE_ENV=production UNI_PLATFORM=mp-baidu vue-cli-service uni-build",
+
+    "serve_zfb": "cross-env VUE_APP_ENV=development npm run dev:mp-alipay",
+    "test_zfb": "npm run clear_dev && cross-env VUE_APP_ENV=test npm run build:mp-alipay && cp -rf ./dist/build ./dist/dev",
+    "pre_zfb": "npm run clear_dev && cross-env VUE_APP_ENV=pre npm run build:mp-alipay && cp -rf ./dist/build ./dist/dev",
+    "build_zfb": "npm run clear_dev  && cross-env VUE_APP_ENV=production npm run build:mp-alipay && cp -rf ./dist/build ./dist/dev",
+    "dev:mp-alipay": "cross-env NODE_ENV=development UNI_PLATFORM=mp-alipay vue-cli-service uni-build --watch",
+    "build:mp-alipay": "cross-env NODE_ENV=production UNI_PLATFORM=mp-alipay vue-cli-service uni-build",
+
+    "serve_h5": "cross-env VUE_APP_ENV=development npm run dev:h5",
+    "test_h5": "npm run clear_dev && cross-env VUE_APP_ENV=test npm run build:h5 && cp -rf ./dist/build ./dist/dev",
+    "pre_h5": "npm run clear_dev && cross-env VUE_APP_ENV=pre npm run build:h5 && cp -rf ./dist/build ./dist/dev",
+    "build_h5": "npm run clear_dev  && cross-env VUE_APP_ENV=production npm run build:h5 && cp -rf ./dist/build ./dist/dev",
+    "dev:h5": "cross-env NODE_ENV=development UNI_PLATFORM=h5 vue-cli-service uni-serve",
+    "build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 vue-cli-service uni-build"
   },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-27920200527001",
